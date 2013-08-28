@@ -1,0 +1,15 @@
+/.metadata/
+/5aus45/build/
+/5aus45/nbproject/private/
+/Josephus/build/
+/Josephus/nbproject/private/
+/Polynomdivision/build/
+/Polynomdivision/nbproject/private/
+/TesteJava/.settings/
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear

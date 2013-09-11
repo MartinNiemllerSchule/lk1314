@@ -11,7 +11,7 @@ package tournamentsort;
 public class TournamentSort {
 
   private static Element sieger = new Element();
-  private static int anzahl = 8;
+  private static int anzahl = 10; // TODO: im Moment geht das Programm nur mit gerader Anzahl 
 
   /**
    * @param args the command line arguments

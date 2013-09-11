@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * TournamentSort 
  * mit Objekten
@@ -75,13 +74,9 @@ public class TournamentSort {
     System.out.println(sieger.toString());
     System.out.println("\n");
     
-    entnimmAlle();
-  }
-
-  private static void entnimmAlle() {
     System.out.println(sieger.sortiere());
   }
-  
+
   private static void baueBaum() {
     // erstellt den oberen Teil des Baumes, 
     int anz = 1;
@@ -96,4 +91,3 @@ public class TournamentSort {
     sieger.fülleEbene(anzahl);
   }
 }
->>>>>>> ba97ebfa25e746d442b2fd3164ab727fdd96c68a

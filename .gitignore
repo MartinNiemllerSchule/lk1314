@@ -6,6 +6,7 @@
 /Polynomdivision/build/
 /Polynomdivision/nbproject/private/
 /TournamentSort/build/
+/TournamentSort/nbproject/private/
 
 *~
 *.class
@@ -14,4 +15,3 @@
 *.jar
 *.war
 *.ear
-/TournamentSort/nbproject/private/

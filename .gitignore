@@ -5,8 +5,9 @@
 /Josephus/nbproject/private/
 /Polynomdivision/build/
 /Polynomdivision/nbproject/private/
-/TesteJava/.settings/
+/TournamentSort/build/
 
+*~
 *.class
 
 # Package Files #

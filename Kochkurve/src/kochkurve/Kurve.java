@@ -30,7 +30,10 @@ public class Kurve extends JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setTitle("Kochkurve");
     setForeground(new java.awt.Color(0, 0, 204));
-    setPreferredSize(new java.awt.Dimension(800, 600));
+    setUndecorated(true);
+    setOpacity(0.2F);
+    setPreferredSize(new java.awt.Dimension(800, 300));
+    setResizable(false);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);

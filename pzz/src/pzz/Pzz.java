@@ -9,7 +9,6 @@ package pzz;
  * @author frank.baethge
  */
 public class Pzz {
-
   /**
    * @param args the command line arguments
    */

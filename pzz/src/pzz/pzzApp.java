@@ -9,7 +9,7 @@ package pzz;
  * @author frank.baethge
  */
 public class pzzApp extends javax.swing.JFrame {
-
+  private Primzahl pzListe = new Primzahl(20);
   /**
    * Creates new form pzzApp
    */
@@ -36,7 +36,7 @@ public class pzzApp extends javax.swing.JFrame {
     jLabel1.setBackground(new java.awt.Color(153, 255, 153));
     jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
     jLabel1.setForeground(new java.awt.Color(51, 153, 0));
-    jLabel1.setText("Hallo Welt, hier sollen Primzahlen angezeigt werden.");
+    jLabel1.setText("Hallo Welt, hier sollen Primzahlzwillinge angezeigt werden.");
     jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
       public void mouseClicked(java.awt.event.MouseEvent evt) {
         pzzAppLabel_mouseClicked(evt);
@@ -69,14 +69,16 @@ public class pzzApp extends javax.swing.JFrame {
       .addGroup(layout.createSequentialGroup()
         .addContainerGap()
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-              .addComponent(textFeld, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-              .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-          .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(38, Short.MAX_VALUE))
+          .addGroup(layout.createSequentialGroup()
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+              .addGroup(layout.createSequentialGroup()
+                .addComponent(textFeld, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGap(0, 0, Short.MAX_VALUE))
+          .addComponent(jScrollPane1))
+        .addContainerGap())
     );
     layout.setVerticalGroup(
       layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,10 +110,10 @@ public class pzzApp extends javax.swing.JFrame {
     int teste = Integer.valueOf(textFeld.getText());
     int anzPz = 0;
     do {
-      if ( Primzahl.isPrime(teste) ) {
+      if ( pzListe.isPrime(teste) ) {
         anzPz++;
         if (anzPz == 0) {
-          ausgabeTextPane.setText(teste);
+          ausgabeTextPane.setText(Integer.toString(teste));
         } else {
           ausgabeTextPane.setText(ausgabeTextPane.getText()+", "+teste);
         }

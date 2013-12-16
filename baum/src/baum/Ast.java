@@ -46,7 +46,7 @@ public class Ast {
    */
   public String ausgeben(String kodierung) {
     return "Häufigkeit: " + getHäufigkeit() + " l: (" + getLinks().ausgeben(kodierung + '0') + ")" + 
-            "r: (" + getRechts().ausgeben(kodierung+'1') + ")";
+           "r: (" + getRechts().ausgeben(kodierung+'1') + ")";
   }
   /**
    * Berechnet die Summe für alle Blätter über das Produkt aus ebene * häufigkeit und 
@@ -99,5 +99,18 @@ public class Ast {
    */
   public void setHäufigkeit(int häufigkeit) {
     this.häufigkeit = häufigkeit;
+  }
+  
+  protected String getGraphviz(int ebene) {
+    String gv = String.format(
+            " \"%s\" [label=\"%d\"]", 
+            this, 
+            getHäufigkeit() 
+            );
+    String linkedTo = String.format(
+            "\"%s\" -> \"%s\"\n\"%s\" -> \"%s\"",
+            this, links, this, rechts );
+    return gv + "\n" + links.getGraphviz(ebene+1) + "\n" + rechts.getGraphviz(ebene+1) +
+            "\n" + linkedTo;
   }
 }

@@ -1,0 +1,130 @@
+digraph g {
+ graph [
+  rankdir = "TB"
+  bgcolor = "white:lightblue"
+  style="filled"
+  gradientangle = 270
+ ];
+ node [shape=box,style=filled,color="lightgray"];
+ "baum.Ast@79717e" [label="164"]
+ "baum.Ast@10a2d64" [label="81"]
+ "baum.Ast@89cf1e" [label="47"]
+ "baum.Blatt@982589" [label="  - 24" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@c88440" [label="e - 23" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@89cf1e" -> "baum.Blatt@982589"
+"baum.Ast@89cf1e" -> "baum.Blatt@c88440"
+ "baum.Ast@17ce4e7" [label="34"]
+ "baum.Blatt@62937c" [label="n - 13" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Ast@1c0e45a" [label="21"]
+ "baum.Blatt@cfec48" [label="i - 11" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@a17083" [label="r - 10" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@1c0e45a" -> "baum.Blatt@cfec48"
+"baum.Ast@1c0e45a" -> "baum.Blatt@a17083"
+"baum.Ast@17ce4e7" -> "baum.Blatt@62937c"
+"baum.Ast@17ce4e7" -> "baum.Ast@1c0e45a"
+"baum.Ast@10a2d64" -> "baum.Ast@89cf1e"
+"baum.Ast@10a2d64" -> "baum.Ast@17ce4e7"
+ "baum.Ast@12a3722" [label="83"]
+ "baum.Ast@e1d5ea" [label="38"]
+ "baum.Ast@10da5eb" [label="15"]
+ "baum.Blatt@1b3f829" [label="u - 8" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@698403" [label="t - 7" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@10da5eb" -> "baum.Blatt@1b3f829"
+"baum.Ast@10da5eb" -> "baum.Blatt@698403"
+ "baum.Ast@1081d2e" [label="23"]
+ "baum.Ast@15a0305" [label="12"]
+ "baum.Blatt@765a16" [label="a - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@148bd3" [label="d - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@15a0305" -> "baum.Blatt@765a16"
+"baum.Ast@15a0305" -> "baum.Blatt@148bd3"
+ "baum.Ast@7c4c51" [label="11"]
+ "baum.Blatt@e80842" [label="h - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@17653ae" [label="c - 5" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@7c4c51" -> "baum.Blatt@e80842"
+"baum.Ast@7c4c51" -> "baum.Blatt@17653ae"
+"baum.Ast@1081d2e" -> "baum.Ast@15a0305"
+"baum.Ast@1081d2e" -> "baum.Ast@7c4c51"
+"baum.Ast@e1d5ea" -> "baum.Ast@10da5eb"
+"baum.Ast@e1d5ea" -> "baum.Ast@1081d2e"
+ "baum.Ast@a31e1b" [label="45"]
+ "baum.Ast@16fe0f4" [label="28"]
+ "baum.Ast@d02b51" [label="13"]
+ "baum.Ast@1c247a0" [label="7"]
+ "baum.Blatt@1431340" [label="w - 4" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@a4e2e3" [label=". - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@1c247a0" -> "baum.Blatt@1431340"
+"baum.Ast@1c247a0" -> "baum.Blatt@a4e2e3"
+ "baum.Ast@1ec6696" [label="6"]
+ "baum.Blatt@12bb7e0" [label="S - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@134f69a" [label="g - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@1ec6696" -> "baum.Blatt@12bb7e0"
+"baum.Ast@1ec6696" -> "baum.Blatt@134f69a"
+"baum.Ast@d02b51" -> "baum.Ast@1c247a0"
+"baum.Ast@d02b51" -> "baum.Ast@1ec6696"
+ "baum.Ast@cbf30e" [label="15"]
+ "baum.Ast@2a15cd" [label="9"]
+ "baum.Blatt@e45076" [label="m - 5" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@15e9756" [label="s - 4" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@2a15cd" -> "baum.Blatt@e45076"
+"baum.Ast@2a15cd" -> "baum.Blatt@15e9756"
+ "baum.Ast@fd68b1" [label="6"]
+ "baum.Blatt@121ab80" [label="l - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@1827284" [label="o - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@fd68b1" -> "baum.Blatt@121ab80"
+"baum.Ast@fd68b1" -> "baum.Blatt@1827284"
+"baum.Ast@cbf30e" -> "baum.Ast@2a15cd"
+"baum.Ast@cbf30e" -> "baum.Ast@fd68b1"
+"baum.Ast@16fe0f4" -> "baum.Ast@d02b51"
+"baum.Ast@16fe0f4" -> "baum.Ast@cbf30e"
+ "baum.Ast@19d0a1" [label="17"]
+ "baum.Ast@12c7568" [label="9"]
+ "baum.Ast@12d15a9" [label="5"]
+ "baum.Blatt@10a3b24" [label="a - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@b0ce8f" [label="B - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@12d15a9" -> "baum.Blatt@10a3b24"
+"baum.Ast@12d15a9" -> "baum.Blatt@b0ce8f"
+ "baum.Ast@e91f5d" [label="4"]
+ "baum.Blatt@1c92535" [label="v - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@a9c09e" [label="Z - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@e91f5d" -> "baum.Blatt@1c92535"
+"baum.Ast@e91f5d" -> "baum.Blatt@a9c09e"
+"baum.Ast@12c7568" -> "baum.Ast@12d15a9"
+"baum.Ast@12c7568" -> "baum.Ast@e91f5d"
+ "baum.Ast@1d009b4" [label="8"]
+ "baum.Ast@a4e743" [label="4"]
+ "baum.Ast@9f671b" [label="2"]
+ "baum.Blatt@a6d51e" [label="D - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@f1bb78" [label="I - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@9f671b" -> "baum.Blatt@a6d51e"
+"baum.Ast@9f671b" -> "baum.Blatt@f1bb78"
+ "baum.Ast@12a3793" [label="2"]
+ "baum.Blatt@4b035d" [label="T - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@ca0115" [label="V - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@12a3793" -> "baum.Blatt@4b035d"
+"baum.Ast@12a3793" -> "baum.Blatt@ca0115"
+"baum.Ast@a4e743" -> "baum.Ast@9f671b"
+"baum.Ast@a4e743" -> "baum.Ast@12a3793"
+ "baum.Ast@4aeb52" [label="4"]
+ "baum.Ast@d1fa5" [label="2"]
+ "baum.Blatt@4cee32" [label="b - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@aa37a6" [label="f - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@d1fa5" -> "baum.Blatt@4cee32"
+"baum.Ast@d1fa5" -> "baum.Blatt@aa37a6"
+ "baum.Ast@198a455" [label="2"]
+ "baum.Blatt@12b7eea" [label="k - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@99353f" [label="p - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Ast@198a455" -> "baum.Blatt@12b7eea"
+"baum.Ast@198a455" -> "baum.Blatt@99353f"
+"baum.Ast@4aeb52" -> "baum.Ast@d1fa5"
+"baum.Ast@4aeb52" -> "baum.Ast@198a455"
+"baum.Ast@1d009b4" -> "baum.Ast@a4e743"
+"baum.Ast@1d009b4" -> "baum.Ast@4aeb52"
+"baum.Ast@19d0a1" -> "baum.Ast@12c7568"
+"baum.Ast@19d0a1" -> "baum.Ast@1d009b4"
+"baum.Ast@a31e1b" -> "baum.Ast@16fe0f4"
+"baum.Ast@a31e1b" -> "baum.Ast@19d0a1"
+"baum.Ast@12a3722" -> "baum.Ast@e1d5ea"
+"baum.Ast@12a3722" -> "baum.Ast@a31e1b"
+"baum.Ast@79717e" -> "baum.Ast@10a2d64"
+"baum.Ast@79717e" -> "baum.Ast@12a3722"
+}

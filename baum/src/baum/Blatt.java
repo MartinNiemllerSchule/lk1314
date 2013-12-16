@@ -18,13 +18,19 @@ public class Blatt extends Ast {
   
   @Override
   public String ausgeben(String kodierung) {
-    Blatt b;
-    b = new Blatt('c',6);
-
     return "\"" + buchstabe + '"' + getHäufigkeit() + ' ' + kodierung + ' ';
   }
   @Override
   public Integer berechneBitlänge(int ebene) {
     return ebene * getHäufigkeit();
+  }
+  @Override
+  protected String getGraphviz(int ebene) {
+    return String.format(
+            " \"%s\" [label=\"%s - %d\" shape=ellipse,style=filled,color=\".4 1.0 .7\"]",
+            this,
+            buchstabe,
+            getHäufigkeit()
+            );
   }
 }

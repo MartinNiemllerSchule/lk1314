@@ -1,0 +1,130 @@
+digraph g {
+ graph [
+  rankdir = "TB"
+  bgcolor = "white:lightblue"
+  style="filled"
+  gradientangle = 270
+ ];
+ node [shape=box,style=filled,color="lightgray"];
+ "baum.Knoten@c24c0" [label="164"]
+ "baum.Knoten@1ee3914" [label="55"]
+ "baum.Blatt@21b6d" [label="  - 24" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@176c74b" [label="31"]
+ "baum.Knoten@1e97676" [label="13"]
+ "baum.Blatt@e102dc" [label="a - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@1e0be38" [label="t - 7" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@1e97676" -> "baum.Blatt@e102dc"
+"baum.Knoten@1e97676" -> "baum.Blatt@1e0be38"
+ "baum.Knoten@540408" [label="18"]
+ "baum.Blatt@c9ba38" [label="u - 8" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@13bad12" [label="10"]
+ "baum.Blatt@9ed927" [label="m - 5" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@18a7efd" [label="5"]
+ "baum.Knoten@efd552" [label="2"]
+ "baum.Blatt@1e859c0" [label="D - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@1837697" [label="f - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@efd552" -> "baum.Blatt@1e859c0"
+"baum.Knoten@efd552" -> "baum.Blatt@1837697"
+ "baum.Blatt@13582d" [label="S - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@18a7efd" -> "baum.Knoten@efd552"
+"baum.Knoten@18a7efd" -> "baum.Blatt@13582d"
+"baum.Knoten@13bad12" -> "baum.Blatt@9ed927"
+"baum.Knoten@13bad12" -> "baum.Knoten@18a7efd"
+"baum.Knoten@540408" -> "baum.Blatt@c9ba38"
+"baum.Knoten@540408" -> "baum.Knoten@13bad12"
+"baum.Knoten@176c74b" -> "baum.Knoten@1e97676"
+"baum.Knoten@176c74b" -> "baum.Knoten@540408"
+"baum.Knoten@1ee3914" -> "baum.Blatt@21b6d"
+"baum.Knoten@1ee3914" -> "baum.Knoten@176c74b"
+ "baum.Knoten@140c281" [label="109"]
+ "baum.Knoten@116471f" [label="39"]
+ "baum.Knoten@19106c7" [label="16"]
+ "baum.Knoten@cdedfd" [label="7"]
+ "baum.Blatt@cdfc9c" [label="g - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@1d99a4d" [label="w - 4" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@cdedfd" -> "baum.Blatt@cdfc9c"
+"baum.Knoten@cdedfd" -> "baum.Blatt@1d99a4d"
+ "baum.Knoten@bf2d5e" [label="9"]
+ "baum.Blatt@15c7850" [label="s - 4" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@fa7e74" [label="c - 5" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@bf2d5e" -> "baum.Blatt@15c7850"
+"baum.Knoten@bf2d5e" -> "baum.Blatt@fa7e74"
+"baum.Knoten@19106c7" -> "baum.Knoten@cdedfd"
+"baum.Knoten@19106c7" -> "baum.Knoten@bf2d5e"
+ "baum.Blatt@1decdec" [label="e - 23" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@116471f" -> "baum.Knoten@19106c7"
+"baum.Knoten@116471f" -> "baum.Blatt@1decdec"
+ "baum.Knoten@e5855a" [label="70"]
+ "baum.Knoten@34a1fc" [label="25"]
+ "baum.Knoten@1632c2d" [label="12"]
+ "baum.Blatt@b166b5" [label="h - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@1971afc" [label="6"]
+ "baum.Blatt@186db54" [label="ä - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@c2a132" [label="l - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@1971afc" -> "baum.Blatt@186db54"
+"baum.Knoten@1971afc" -> "baum.Blatt@c2a132"
+"baum.Knoten@1632c2d" -> "baum.Blatt@b166b5"
+"baum.Knoten@1632c2d" -> "baum.Knoten@1971afc"
+ "baum.Knoten@60420f" [label="13"]
+ "baum.Knoten@16cd7d5" [label="6"]
+ "baum.Blatt@1aaa14a" [label="o - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@19dfbff" [label="3"]
+ "baum.Blatt@1e51060" [label="k - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@56a499" [label="z - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@19dfbff" -> "baum.Blatt@1e51060"
+"baum.Knoten@19dfbff" -> "baum.Blatt@56a499"
+"baum.Knoten@16cd7d5" -> "baum.Blatt@1aaa14a"
+"baum.Knoten@16cd7d5" -> "baum.Knoten@19dfbff"
+ "baum.Knoten@1c39a2d" [label="7"]
+ "baum.Knoten@10b4b2f" [label="3"]
+ "baum.Blatt@183f74d" [label="b - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@16a9d42" [label="B - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@10b4b2f" -> "baum.Blatt@183f74d"
+"baum.Knoten@10b4b2f" -> "baum.Blatt@16a9d42"
+ "baum.Knoten@750159" [label="4"]
+ "baum.Blatt@12152e6" [label="v - 2" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@15d56d5" [label="2"]
+ "baum.Blatt@cd2c3c" [label="T - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@7a84e4" [label="p - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@15d56d5" -> "baum.Blatt@cd2c3c"
+"baum.Knoten@15d56d5" -> "baum.Blatt@7a84e4"
+"baum.Knoten@750159" -> "baum.Blatt@12152e6"
+"baum.Knoten@750159" -> "baum.Knoten@15d56d5"
+"baum.Knoten@1c39a2d" -> "baum.Knoten@10b4b2f"
+"baum.Knoten@1c39a2d" -> "baum.Knoten@750159"
+"baum.Knoten@60420f" -> "baum.Knoten@16cd7d5"
+"baum.Knoten@60420f" -> "baum.Knoten@1c39a2d"
+"baum.Knoten@34a1fc" -> "baum.Knoten@1632c2d"
+"baum.Knoten@34a1fc" -> "baum.Knoten@60420f"
+ "baum.Knoten@1975b59" [label="45"]
+ "baum.Knoten@1d4c61c" [label="21"]
+ "baum.Blatt@1ded0fd" [label="r - 10" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Knoten@df8ff1" [label="11"]
+ "baum.Knoten@1abab88" [label="5"]
+ "baum.Knoten@1194a4e" [label="2"]
+ "baum.Blatt@a97b0b" [label="V - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@506411" [label="I - 1" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@1194a4e" -> "baum.Blatt@a97b0b"
+"baum.Knoten@1194a4e" -> "baum.Blatt@506411"
+ "baum.Blatt@fe64b9" [label=". - 3" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@1abab88" -> "baum.Knoten@1194a4e"
+"baum.Knoten@1abab88" -> "baum.Blatt@fe64b9"
+ "baum.Blatt@a1807c" [label="d - 6" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@df8ff1" -> "baum.Knoten@1abab88"
+"baum.Knoten@df8ff1" -> "baum.Blatt@a1807c"
+"baum.Knoten@1d4c61c" -> "baum.Blatt@1ded0fd"
+"baum.Knoten@1d4c61c" -> "baum.Knoten@df8ff1"
+ "baum.Knoten@1a626f" [label="24"]
+ "baum.Blatt@19616c7" [label="i - 11" shape=ellipse,style=filled,color=".4 1.0 .7"]
+ "baum.Blatt@1430b5c" [label="n - 13" shape=ellipse,style=filled,color=".4 1.0 .7"]
+"baum.Knoten@1a626f" -> "baum.Blatt@19616c7"
+"baum.Knoten@1a626f" -> "baum.Blatt@1430b5c"
+"baum.Knoten@1975b59" -> "baum.Knoten@1d4c61c"
+"baum.Knoten@1975b59" -> "baum.Knoten@1a626f"
+"baum.Knoten@e5855a" -> "baum.Knoten@34a1fc"
+"baum.Knoten@e5855a" -> "baum.Knoten@1975b59"
+"baum.Knoten@140c281" -> "baum.Knoten@116471f"
+"baum.Knoten@140c281" -> "baum.Knoten@e5855a"
+"baum.Knoten@c24c0" -> "baum.Knoten@1ee3914"
+"baum.Knoten@c24c0" -> "baum.Knoten@140c281"
+}

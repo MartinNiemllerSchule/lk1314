@@ -8,10 +8,10 @@ package baum;
  *
  * @author frank.baethge
  */
-public class Blatt extends Ast {
+public class Blatt extends Knoten {
   private char buchstabe;
 
-  public Blatt(char c, int h) {
+  public Blatt(char c, Integer h) {
     buchstabe = c;
     setHäufigkeit(h);
   }

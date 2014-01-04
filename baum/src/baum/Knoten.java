@@ -9,18 +9,18 @@ package baum;
  *
  * @author frank.baethge
  */
-public class Ast {
-  private Ast rechts;
-  private Ast links;
-  private int häufigkeit;
+public class Knoten implements Comparable<Knoten> {
+  private Knoten rechts;
+  private Knoten links;
+  private Integer häufigkeit;
   
-  public Ast() {
+  public Knoten() {
     rechts = null;
     links = null;
     häufigkeit = 0;
   }
 
-  public Ast(Ast l, Ast r) {
+  public Knoten(Knoten l, Knoten r) {
     rechts = r;
     links = l;
     häufigkeit = 0;
@@ -62,42 +62,42 @@ public class Ast {
   /**
    * @return the rechts
    */
-  public Ast getRechts() {
+  public Knoten getRechts() {
     return rechts;
   }
 
   /**
    * @param rechts the rechts to set
    */
-  public void setRechts(Ast rechts) {
+  public void setRechts(Knoten rechts) {
     this.rechts = rechts;
   }
 
   /**
    * @return the links
    */
-  public Ast getLinks() {
+  public Knoten getLinks() {
     return links;
   }
 
   /**
    * @param links the links to set
    */
-  public void setLinks(Ast links) {
+  public void setLinks(Knoten links) {
     this.links = links;
   }
 
   /**
    * @return the häufigkeit
    */
-  public int getHäufigkeit() {
+  public Integer getHäufigkeit() {
     return häufigkeit;
   }
 
   /**
    * @param häufigkeit the häufigkeit to set
    */
-  public void setHäufigkeit(int häufigkeit) {
+  public void setHäufigkeit(Integer häufigkeit) {
     this.häufigkeit = häufigkeit;
   }
   
@@ -112,5 +112,10 @@ public class Ast {
             this, links, this, rechts );
     return gv + "\n" + links.getGraphviz(ebene+1) + "\n" + rechts.getGraphviz(ebene+1) +
             "\n" + linkedTo;
+  }
+  
+  @Override
+  public int compareTo(Knoten k) {
+    return this.häufigkeit.compareTo(k.häufigkeit);
   }
 }

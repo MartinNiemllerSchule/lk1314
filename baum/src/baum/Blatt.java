@@ -11,6 +11,10 @@ package baum;
 public class Blatt extends Knoten {
   private char buchstabe;
 
+  public Blatt(Integer h, char c) {
+    buchstabe = c;
+    setHäufigkeit(h);
+  }
   public Blatt(char c, Integer h) {
     buchstabe = c;
     setHäufigkeit(h);

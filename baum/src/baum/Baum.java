@@ -37,10 +37,11 @@ public class Baum {
    */
   public static void main(String[] args) {
     
-    erstelleBaum();
+    // erstelleBaumVonTobias(); // geht nicht (NullPointerException)
+    erstelleBaumVonLennartHannesElias();
     System.out.println("Bitlänge des komprimierten Textes: " + wurzel.berechneBitlänge(0));
     //System.out.println("Wurzel: " + wurzel.ausgeben(""));
-    // System.out.println("Graphviz-Ausgabe: \n"+getGraphviz());
+     System.out.println("Graphviz-Ausgabe: \n"+getGraphviz());
     // rotiere Wurzel links
     /*
     Knoten alteWurzel = wurzel;
@@ -158,5 +159,135 @@ public class Baum {
         )
       )
     );
+  }
+  
+  private static void erstelleBaumVonLennartHannesElias() {
+    wurzel = new Knoten( //164
+      new Knoten( //79
+        new Knoten( //56
+          new Knoten(
+            new Blatt('n', 13),
+            new Knoten(
+              new Blatt('p', 7),
+              new Blatt('u', 8))),
+          new Knoten(  //28
+            new Knoten(  //16
+              new Knoten(  //8
+                new Blatt('s', 4), 
+                new Blatt('w', 4)), 
+              new Knoten(
+                new Blatt('m', 5), 
+                new Blatt('.', 3))), 
+            new Knoten(
+              new Knoten(
+                new Blatt('g', 3), 
+                new Blatt('S', 3)), 
+              new Knoten(
+                new Blatt('o', 3), 
+                new Blatt('l', 3))))), 
+        new Knoten(
+          new Blatt('i', 11), 
+          new Knoten(
+            new Blatt('d', 6),
+            new Blatt('a', 6)))),
+      new Knoten(
+        new Blatt(' ', 24), 
+        new Knoten(  //61
+          new Knoten(  //32
+            new Knoten(  //9
+              new Knoten(  //4
+                new Blatt('B', 2), 
+                new Blatt('ä', 3)), 
+              new Knoten(  //5
+                new Blatt('z', 2), 
+                new Blatt('v', 2))), 
+            new Blatt('e', 23)), 
+          new Knoten(  //29
+            new Knoten(
+              new Knoten(
+                new Knoten(
+                  new Blatt('f', 1), 
+                  new Blatt('b', 1)), 
+                new Knoten(
+                  new Blatt('k', 1), 
+                  new Blatt('p', 1))), 
+              new Knoten(
+                  new Knoten(
+                    new Blatt('V', 1), 
+                    new Blatt('T', 1)), 
+                  new Knoten(
+                    new Blatt('F', 1), 
+                    new Blatt('D', 1)))),
+            new Knoten(
+              new Blatt('i', 10), 
+              new Knoten(
+                new Blatt('h', 6), 
+                new Blatt('c', 5)))))));
+
+  }
+  
+  private static void erstelleBaumVonTobias() {
+     wurzel=new Knoten();
+       wurzel.links=new Knoten();
+       wurzel.links.links=new Knoten();
+       wurzel.links.rechts=new Knoten();
+       wurzel.links.rechts.rechts=new Knoten();
+       wurzel.links.rechts.links=new Knoten();
+       wurzel.links.rechts.links.links=new Knoten();
+       wurzel.links.rechts.links.rechts=new Knoten();
+       wurzel.links.rechts.rechts.links=new Knoten();
+       wurzel.links.rechts.rechts.rechts=new Knoten();
+       wurzel.rechts=new Knoten();
+       wurzel.rechts.links=new Knoten();
+       wurzel.rechts.links.links=new Knoten();
+       wurzel.rechts.links.rechts=new Knoten();
+       wurzel.rechts.rechts=new Knoten();
+       wurzel.rechts.rechts.links=new Knoten();
+       wurzel.rechts.rechts.links.links=new Knoten();
+       wurzel.rechts.rechts.links.links.links=new Knoten();
+       wurzel.rechts.rechts.links.links.rechts=new Knoten();
+       wurzel.rechts.rechts.links.rechts=new Knoten();
+       wurzel.rechts.rechts.links.rechts.links=new Knoten();
+       wurzel.rechts.rechts.links.rechts.rechts=new Knoten();
+       wurzel.rechts.rechts.rechts=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.links=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.links.links=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.links.rechts=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.rechts=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.rechts.links=new Knoten();
+       wurzel.rechts.rechts.rechts.rechts.rechts.rechts=new Knoten();
+       
+       wurzel.links.links.links=new Blatt(24,' ');
+       wurzel.links.links.rechts=new Blatt(23,'e');
+       wurzel.links.rechts.links.links.links=new Blatt(13,'n');
+       wurzel.links.rechts.links.links.rechts=new Blatt(11,'i');
+       wurzel.links.rechts.links.rechts.links=new Blatt(10,'r');
+       wurzel.links.rechts.links.rechts.rechts=new Blatt(8,'u');
+       wurzel.links.rechts.rechts.links.links=new Blatt(5,'c');
+       wurzel.links.rechts.rechts.links.rechts=new Blatt(5,'m');
+       wurzel.links.rechts.rechts.rechts.links=new Blatt(4,'s');
+       wurzel.links.rechts.rechts.rechts.rechts=new Blatt(4,'w');
+       wurzel.rechts.links.links.links=new Blatt(7,'t');
+       wurzel.rechts.links.links.rechts=new Blatt(6,'a');
+       wurzel.rechts.links.rechts.links=new Blatt(6,'d');
+       wurzel.rechts.links.rechts.rechts=new Blatt(6,'h');
+       wurzel.rechts.rechts.links.links.links.links=new Blatt(3,'S');
+       wurzel.rechts.rechts.links.links.links.rechts=new Blatt(3,'g');
+       wurzel.rechts.rechts.links.links.rechts.links=new Blatt(3,'l');
+       wurzel.rechts.rechts.links.links.links.rechts=new Blatt(3,'o');
+       wurzel.rechts.rechts.links.rechts.links.links=new Blatt(3,'ä');
+       wurzel.rechts.rechts.links.rechts.links.rechts=new Blatt(2,'B');
+       wurzel.rechts.rechts.links.rechts.rechts.links=new Blatt(2,'v');
+       wurzel.rechts.rechts.links.rechts.rechts.rechts=new Blatt(2,'z');
+       wurzel.rechts.rechts.rechts.links=new Blatt(3,'.');
+       wurzel.rechts.rechts.rechts.rechts.links.links.links=new Blatt(1,'B');
+       wurzel.rechts.rechts.rechts.rechts.links.links.rechts=new Blatt(1,'I');
+       wurzel.rechts.rechts.rechts.rechts.links.rechts.links=new Blatt(1,'T');
+       wurzel.rechts.rechts.rechts.rechts.links.rechts.rechts=new Blatt(1,'V');
+       wurzel.rechts.rechts.rechts.rechts.rechts.links.links=new Blatt(1,'b');
+       wurzel.rechts.rechts.rechts.rechts.rechts.links.rechts=new Blatt(1,'f');
+       wurzel.rechts.rechts.rechts.rechts.rechts.rechts.links=new Blatt(1,'k');
+       wurzel.rechts.rechts.rechts.rechts.rechts.rechts.rechts=new Blatt(1,'p');
   }
 }

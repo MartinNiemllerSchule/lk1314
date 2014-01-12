@@ -10,8 +10,8 @@ package baum;
  * @author frank.baethge
  */
 public class Knoten implements Comparable<Knoten> {
-  private Knoten rechts;
-  private Knoten links;
+  protected Knoten rechts;
+  protected Knoten links;
   private Integer häufigkeit;
   
   public Knoten() {

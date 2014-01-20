@@ -1,0 +1,33 @@
+digraph g {
+ graph [
+  rankdir = "TB"
+  bgcolor = "white:lightblue"
+  style="filled"
+  gradientangle = 270
+ ];
+ node [shape=box,style=filled,color="lightgray"];
+ "Rom" [label="Rom"]
+"Rom" -> "Berlin"
+ "Berlin" [label="Berlin"]
+"Berlin" -> "Amsterdam"
+ "Amsterdam" [label="Amsterdam"]
+"Berlin" -> "Paris"
+ "Paris" [label="Paris"]
+"Paris" -> "London"
+ "London" [label="London"]
+"London" -> "Lissabon"
+ "Lissabon" [label="Lissabon"]
+"Lissabon" -> "Brüssel"
+ "Brüssel" [label="Brüssel"]
+"London" -> "Luxemburg"
+ "Luxemburg" [label="Luxemburg"]
+"Rom" -> "Ulan Bator"
+ "Ulan Bator" [label="Ulan Bator"]
+"Ulan Bator" -> "Washington"
+ "Washington" [label="Washington"]
+"Washington" -> "Vatikanstadt"
+ "Vatikanstadt" [label="Vatikanstadt"]
+"Washington" -> "Wien"
+ "Wien" [label="Wien"]
+
+}

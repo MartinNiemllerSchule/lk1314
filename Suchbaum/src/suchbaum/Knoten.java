@@ -12,52 +12,89 @@ package suchbaum;
 public class Knoten {
   private Knoten links;
   private Knoten rechts;
+  private Knoten zurück;
   private String wert;
 
   protected Knoten(String w) {
     links = null;
     rechts = null;
+    zurück = null;
     wert = w;
   }
   
   protected void einfügen(Knoten k) {
-    if (k.getWert().compareTo(wert) < 0) {
-      if (links == null) {
-        links = k;
+    if (k.getWert().compareTo(getWert()) < 0) {
+      if (getLinks() == null) {
+        setLinks(k);
+        k.setZurück(this);
       } else {
-        links.einfügen(k);
+        getLinks().einfügen(k);
       }
     } else {
-      if (k.getWert().compareTo(wert) == 0) {
-        // mache nichts
+      if (k.getWert().compareTo(getWert()) == 0) {
+        // mache nichts, denn der Wert ist schon vorhanden
       } else {
         // Wert ist größer
-        if (rechts == null) {
-          rechts = k;
+        if (getRechts() == null) {
+          setRechts(k);
+          k.setZurück(this);
         } else {
-          rechts.einfügen(k);
+          getRechts().einfügen(k);
         }
       }
     }
   }
   
+  protected Knoten finde(String toFind) {
+    Integer ct = getWert().compareTo(toFind);
+    if (ct == 0) { // gefunden
+      return this;
+    } else {
+      if (ct > 0) { // das Suchergebnis befindet sich links
+        if (getLinks() == null) {
+          return null;
+        } else {
+          return getLinks().finde(toFind);
+        }
+      } else { // das Suchergebnis befindet sich rechts
+        if (getRechts() == null) {
+          return null;
+        } else {
+          return getRechts().finde(toFind);
+        }
+      } 
+    }
+  }
+  
   @Override
   public String toString() { 
-    return wert; 
+    return getWert(); 
   }
   
   public String inorder() { //LWR
     String ergebnis = "";
-    if (links != null) {
-      ergebnis += links.inorder();
+    if (getLinks() != null) {
+      ergebnis += getLinks().inorder();
     }
-    ergebnis += " " + wert + " ";
-    if (rechts != null) {
-      ergebnis += rechts.inorder();
+    ergebnis += " " + getWert() + " ";
+    if (getRechts() != null) {
+      ergebnis += getRechts().inorder();
     }
     return ergebnis;
   }
   
+  protected String getGraphviz() {
+    String gv = String.format(" \"%s\" [label=\"%s\"]", this, this);
+    String linkedTo = "";
+    if (getLinks() != null) {
+      linkedTo += String.format("\"%s\" -> \"%s\"\n%s", this, getLinks(), getLinks().getGraphviz());
+    }
+    if (getRechts() != null) {
+      linkedTo += String.format("\"%s\" -> \"%s\"\n%s", this, getRechts(), getRechts().getGraphviz());
+    }
+    return String.format("%s\n%s", gv, linkedTo);
+  }
+
   /**
    * @return the links
    */
@@ -87,6 +124,20 @@ public class Knoten {
   }
 
   /**
+   * @return the zurück
+   */
+  public Knoten getZurück() {
+    return zurück;
+  }
+
+  /**
+   * @param zurück the zurück to set
+   */
+  public void setZurück(Knoten zurück) {
+    this.zurück = zurück;
+  }
+
+  /**
    * @return the wert
    */
   public String getWert() {
@@ -98,18 +149,6 @@ public class Knoten {
    */
   public void setWert(String wert) {
     this.wert = wert;
-  }
-
-  protected String getGraphviz() {
-    String gv = String.format(" \"%s\" [label=\"%s\"]", this, this);
-    String linkedTo = "";
-    if (links != null) {
-      linkedTo += String.format("\"%s\" -> \"%s\"\n%s", this, links, links.getGraphviz());
-    }
-    if (rechts != null) {
-      linkedTo += String.format("\"%s\" -> \"%s\"\n%s", this, rechts, rechts.getGraphviz());
-    }
-    return String.format("%s\n%s", gv, linkedTo);
   }
     
 }

@@ -14,7 +14,6 @@ public class Suchbaum {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
     Baum b = new Baum();
     b.einfügen(new Knoten("Rom"));
     b.einfügen(new Knoten("Berlin"));
@@ -31,5 +30,17 @@ public class Suchbaum {
     
     System.out.println("Baum preorder: " + b);
     System.out.println("Graphviz: \n" + b.getGraphviz());
+    
+    Knoten stadt = b.finde("Berlin");
+    System.out.println("Paris: " + stadt);
+    if (stadt != null) {
+      b.rotiereLinks(stadt);
+      System.out.println("Graphviz: \n" + b.getGraphviz());
+    }
+    stadt = b.finde("Berlin");
+    if (stadt != null) {
+      b.rotiereRechts(stadt);
+      System.out.println("Graphviz: \n" + b.getGraphviz());
+    }  
   }
 }

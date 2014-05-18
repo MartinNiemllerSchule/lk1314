@@ -1,0 +1,9 @@
+Denkmaschine
+Brettspiel-KI selbst gemacht
+----------------------------
+c't 10/14, S. 176 (hos)
+
+cthello - Visual-Studio-Projekt mit dem im Artikel vorgestellten Programm
+          "c'thello".
+
+Eine ausführbare .exe-Datei befindet sich in cthello\cthello\bin\Release.

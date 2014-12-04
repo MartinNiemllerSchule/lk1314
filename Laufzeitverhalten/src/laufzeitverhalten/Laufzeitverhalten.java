@@ -26,5 +26,11 @@ public class Laufzeitverhalten {
 //  System.out.println("plz: "+adressen[zeile].p);
     }
 
+    // Sortieren nach Nach- und Vornamen mit der in Java eingebauten Routine
+    javaSort(adressen);
+  }
+
+  public static void javaSort(Adresse[] adr) {
+    Arrays.sort(adr);
   }
 }

@@ -8,6 +8,7 @@ package laufzeitverhalten;
  *
  * @author hannes.kuchelmeister
  */
+
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 public class MergeSort {
@@ -17,26 +18,27 @@ public class MergeSort {
     static Adresse[] tmpArr;
     static long startTime = 0;
     static long endTime = 0;
+
     /**
-     * 
-     * @return gibt die Dauer des letztens sortiervorgangs zurück. 
+     * @return gibt die Dauer des letztens sortiervorgangs zurück.
      */
-    public static long getDauer(){
+    public static long getDauer() {
         return NANOSECONDS.toMillis(endTime - startTime);
     }
+
     public static void sort(Adresse inputArr[]) {
-        startTime= System.nanoTime();
-        
         arr = inputArr;
         tmpArr = new Adresse[arr.length];
+
+        startTime = System.nanoTime();
         doMergeSort(0, arr.length - 1);
-        
         endTime = System.nanoTime();
     }
+
     private static void doMergeSort(int lowerIndex, int higherIndex) {
 
         if (lowerIndex < higherIndex) {
-            int middle = lowerIndex + (higherIndex - lowerIndex) / 2;
+            int middle = (lowerIndex + higherIndex) / 2;
             // links
             doMergeSort(lowerIndex, middle);
             // rechts
@@ -45,6 +47,7 @@ public class MergeSort {
             merge(lowerIndex, middle, higherIndex);
         }
     }
+
     private static void merge(int low, int mid, int high) {
         for (int i = low; i <= high; i++) {
             tmpArr[i] = arr[i];

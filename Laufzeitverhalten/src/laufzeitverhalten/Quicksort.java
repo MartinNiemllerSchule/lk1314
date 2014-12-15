@@ -7,7 +7,6 @@ package laufzeitverhalten;
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 /**
- *
  * @author elias.pflume
  */
 public class Quicksort {

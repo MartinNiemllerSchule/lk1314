@@ -36,7 +36,7 @@ public class Laufzeitverhalten {
         long[] insert = new long[intervalanzahl];
 
 
-        for (int i = 1; i <= intervalanzahl; i++) {
+        for (int i = 1; i <= 1/*intervalanzahl*/; i++) {
             //HIER            
             JavaSort.sort(copyArray((i) * (adressen.length / intervalanzahl), adressen));
             MergeSort.sort(copyArray((i) * (adressen.length / intervalanzahl), adressen));

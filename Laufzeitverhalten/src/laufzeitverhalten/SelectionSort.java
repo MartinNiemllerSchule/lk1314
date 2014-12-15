@@ -30,32 +30,7 @@ public class SelectionSort {
                 daten[m] = tausch;
             }
         }
-/*        int k = 0;
-        int s1 = 0;     //Kleinstes Element
-		Adresse tausch;
-
-		for (int b = 0; b < Daten.length; b++) {
-			for (int i = k; i < Daten.length; i++) { // k definiert sortierten Bereich, k erstes unsortiertes Element
-				if (Daten[s1].compareTo(Daten[i]) <= 0) {
-				} else{
-					s1 = i;
-				}
-			}
-			tausch = Daten[k];
-			Daten[k] = Daten[s1];
-			Daten[s1] = tausch;
-			k++;
-		}
-*/
         dauer = NANOSECONDS.toMillis(System.nanoTime() - time);
-/*
-		for(int i = 0; i<daten.length;i++)
-		{
-			System.out.println(i + ". Datensatz: " + daten[i].n);
-		}
-		System.out.println("Die Laufzeit des Programmes mit " + Daten.length() + dauer);
-*/
-
     }
 
     public static long getDauer() {

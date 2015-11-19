@@ -14,7 +14,7 @@ public class Kurve extends JFrame {
   private static Kurve_1 k1;
   public Kurve() {
     initComponents();
-    k1 = new Kurve_1(3);
+    k1 = new Kurve_1(4);
     System.out.println("Kurve1: " + k1.KochkurveAlsText());
  
   }
@@ -31,8 +31,8 @@ public class Kurve extends JFrame {
     setTitle("Kochkurve");
     setForeground(new java.awt.Color(0, 0, 204));
     setUndecorated(true);
-    setOpacity(0.2F);
-    setPreferredSize(new java.awt.Dimension(800, 300));
+    //setOpacity(0.2F);
+    setPreferredSize(new java.awt.Dimension(850, 300));
     setResizable(false);
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

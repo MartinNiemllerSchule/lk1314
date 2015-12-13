@@ -5,7 +5,6 @@
 package laufzeitverhalten;
 
 /**
- *
  * @author frank.baethge
  */
 public class Adresse implements Comparable<Adresse> {
@@ -33,8 +32,9 @@ public class Adresse implements Comparable<Adresse> {
             return v.compareTo(a.v);
         }
     }
-    @Override 
-    public String toString(){
-        return n + " " + v + " | " + s + " | " + p + " | " + o;  
+
+    @Override
+    public String toString() {
+        return n + " " + v /*+ " | " + s + " | " + p + " | " + o*/;
     }
 }

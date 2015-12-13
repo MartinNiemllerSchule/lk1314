@@ -4,24 +4,15 @@
  */
 package laufzeitverhalten;
 
+import java.util.Arrays;
+
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 /**
- *
  * @author elias.pflume
  */
 public class Quicksort {
 
-    /* public static void start() {
-     int[] a = new int[100];
-     for (int i = 0; i < a.length; i++) {
-     a[i] = (int) (Math.random() * 100);
-     }
-     quicksort(a, 0, (a.length - 1));
-     for (int i = 0; i < a.length; i++) {
-     System.out.println(a[i]);
-     }
-     }*/
     static long start;
     static long ende;
 
@@ -33,35 +24,40 @@ public class Quicksort {
 
     public static void sort(Adresse[] a) {
         start = System.nanoTime();
-        quicksort(a, 0, (a.length - 1));
+        quickSort(a, 0, (a.length - 1));
         ende = System.nanoTime();
+        System.out.println(Arrays.toString(a));
     }
 
-    public static void quicksort(Adresse[] a, int links, int rechts) {
+    public static void quickSort(Adresse[] a, int links, int rechts) {
         if ((rechts - links) <= 1) {
             return;
         }
-        Adresse p = a[links];
-        //System.out.println("p=" + p + " links: " + links + " rechts: " + rechts);
-        int z1 = links;
-        int z2 = rechts;
+        Adresse pivot = a[links];
+        int l = links + 1;
+        int r = rechts;
+        Adresse tausche;
+
         do {
-            if (a[z1].compareTo(p) > 0) {
-                if (a[z2].compareTo(p) <= 0) {
-                    Adresse zwischenwert = a[z1];
-                    a[z1] = a[z2];
-                    a[z2] = zwischenwert;
-                } else {
-                    z2--;
-                }
-            } else {
-                z1++;
+            while (a[l].compareTo(pivot) <= 0 && l < rechts) {
+                l++;
             }
-        } while (z1 < z2);
-        Adresse zwischenwert = a[z1 - 1];
-        a[z1 - 1] = a[links];
-        a[links] = zwischenwert;
-        quicksort(a, links, (z1 - 1));
-        quicksort(a, z2, rechts);
+            while (a[r].compareTo(pivot) >= 0 && links < r) {
+                r--;
+            }
+            if (l < r) {
+                tausche = a[l];
+                a[l] = a[r];
+                a[r] = tausche;
+            }
+        } while (l < r);
+        if (a[r].compareTo(pivot) < 0) {
+            tausche = a[r];
+            a[r] = a[links];
+            a[links] = tausche;
+        }
+
+        quickSort(a, links, r - 1);
+        quickSort(a, r + 1, rechts);
     }
 }

@@ -1,4 +1,4 @@
-package suchbaum;
+package info.baethge.lk1314.suchbaum;
 
 /*
  * To change this template, choose Tools | Templates
@@ -31,9 +31,7 @@ public class Knoten {
         getLinks().einfügen(k);
       }
     } else {
-      if (k.getWert().compareTo(getWert()) == 0) {
-        // mache nichts, denn der Wert ist schon vorhanden
-      } else {
+      if (k.getWert().compareTo(getWert()) != 0) {
         // Wert ist größer
         if (getRechts() == null) {
           setRechts(k);
@@ -41,7 +39,7 @@ public class Knoten {
         } else {
           getRechts().einfügen(k);
         }
-      }
+      } // else -> mache nichts, denn der Wert ist schon vorhanden
     }
   }
   

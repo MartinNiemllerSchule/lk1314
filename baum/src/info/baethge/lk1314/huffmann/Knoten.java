@@ -3,7 +3,7 @@
  *  nur in den Blättern des Baumes stehen unsere Informationen
  *  die Äste führen zu den Blättern
  */
-package baum;
+package info.baethge.lk1314.huffmann;
 
 /**
  *

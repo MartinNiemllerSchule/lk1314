@@ -12,7 +12,7 @@
  * in der Stunde ausgezählt:
  * "Bäume sind auch in der Informatik ein wichtiges Thema. Viele"
  */
-package baum;
+package info.baethge.lk1314.huffmann;
 
 /**
  *

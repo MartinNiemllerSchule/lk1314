@@ -2,7 +2,7 @@
  * Huffman-Algorithmus
  * eine Umsetzung
  */
-package baum;
+package info.baethge.lk1314.huffmann;
 import java.util.List;
 import java.util.Hashtable;
 import java.util.ArrayList;

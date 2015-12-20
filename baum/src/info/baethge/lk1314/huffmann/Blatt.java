@@ -2,7 +2,7 @@
  * Blattklasse
  *  zeigt den Buchstaben an, der über diesen Pfad kodiert werden soll
  */
-package baum;
+package info.baethge.lk1314.huffmann;
 
 /**
  *
